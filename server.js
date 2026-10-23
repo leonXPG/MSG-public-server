@@ -129,7 +129,7 @@ function runSetupWizard(){
       </label>
 
       <label>URL de l'annuaire central</label>
-      <input name="serverListUrl" value="http://msg.playnix.fr" placeholder="http://msg.playnix.fr">
+      <input name="serverListUrl" value="https://msg.playnix.fr" placeholder="https://msg.playnix.fr">
 
       <label>Hôte ou IP publique annoncée (optionnel, détecté automatiquement si vide)</label>
       <input name="publicHost" placeholder="ex: mon-domaine.fr ou 82.64.x.x">
@@ -169,7 +169,7 @@ function runSetupWizard(){
             maxMessageLength: Math.min(10000, Math.max(100, parseInt(params.get('maxMessageLength'),10) || 5000)),
             serverList: {
               enabled: params.get('serverListEnabled') === '1',
-              url: (params.get('serverListUrl') || 'http://msg.playnix.fr').trim(),
+              url: (params.get('serverListUrl') || 'https://msg.playnix.fr').trim(),
               publicHost: (params.get('publicHost') || '').trim(),
               description: (params.get('description') || '').trim().slice(0, 200)
             }
